@@ -1,16 +1,30 @@
+html, body, div {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+  font-family: 'Play', sans-serif;
+}
+
 .row {
   display: inline-flex;
+  align-self: flex-end;
 }
 
 .board {
   display: inline-flex;
   flex-direction: column;
-  border: 1px solid black;
+  width: auto;
 }
 
 .game {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tile {
@@ -30,9 +44,40 @@
   background-color: grey;
 }
 
+.row-hints {
+  min-width: 28px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2px;
+}
+
+/*.row-hints > span {
+  display: flex;
+  flex-direction: row;
+}*/
+
+.col-hints {
+  display: flex;
+  flex-direction: row;
+  padding-left: 8px;
+}
+
 .row-hint-item {
   height:26px;
   text-align: center;
-  line-height: 27px;
+}
 
+.col-hint-item {
+  display: flex;
+  min-width: 27px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.col-hint-item > span {
+  align-self: flex-end;
+  padding-left:3px;
 }

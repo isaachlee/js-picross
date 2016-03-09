@@ -3,14 +3,13 @@ var React = require('react'),
     Picross = require('../picross');
 
 var Board = React.createClass({
-  getInitialState: function() {
-    return {
-      background: ""
-    }
-  },
-
-  highlightSameRow: function (row) {
-
+  generateRowHints: function(rowIdx) {
+    var row = this.props.board.solutionGrid[rowIdx];
+    return (
+      <div className="row-hints">
+        {this.props.board.generateHints(row)}
+      </div>
+    )
   },
 
   render: function() {
@@ -21,6 +20,7 @@ var Board = React.createClass({
           this.props.board.playerGrid.map(function(row, i) {
             return (
               <div className='row' key={i}>
+                {this.generateRowHints(i)}
                 {
                   row.map(function(tile, j) {
                     return (
@@ -30,7 +30,7 @@ var Board = React.createClass({
                 }
               </div>
             );
-          })
+          }.bind(this))
         }
       </div>
     )

@@ -5,5 +5,5 @@ var React = require('react'),
 
 ReactDOM.render(
   <Game />,
-  document.getElementById('game')
+  document.getElementById('content')
 );

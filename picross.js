@@ -1,3 +1,5 @@
+var ArrayHelpers = require('./helpers/array_helpers');
+
 var Tile = function (pos) {
   this.pos = pos;
   this.marked = false;
@@ -21,12 +23,6 @@ Tile.prototype.incorrectClick = function () {
   this.incorrect = true
 };
 
-SAMPLE_SOLUTION = [
-  [1, 1, 1],
-  [1, 0, 1],
-  [0, 1, 0]
-]
-
 var Board = function(solutionGrid) {
   this.solutionGrid = solutionGrid;
   this.playerGrid = [];
@@ -46,16 +42,16 @@ Board.prototype.generatePlayerGrid = function () {
 
 Board.prototype.won = function () {
   var gameState = this.playerGrid.map(function(row){
-    row.map(function(tile){
-      if(tile.marked && !tile.incorrect) {
+    return row.map(function(tile){
+      if(tile.marked) {
         return 1
       } else {
         return 0
       }
     });
   });
-  debugger
   // compare gameState to this.solutionGrid
+  return ArrayHelpers.equals(gameState,this.solutionGrid);
 };
 
 Board.prototype.generateHints = function(row) {
@@ -73,10 +69,14 @@ Board.prototype.generateHints = function(row) {
   if(count !== 0) {
     hints.push(count);
   }
+  if(hints.length === 0) {
+    hints.push([0]);
+  }
   return hints;
 }
 
 window.Board = Board;
+window.ArrayHelpers = ArrayHelpers;
 
 module.exports = {
   Board: Board,
