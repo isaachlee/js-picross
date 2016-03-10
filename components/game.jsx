@@ -134,7 +134,7 @@ var Game = React.createClass({
         </div>
         <br />
         <a target="_blank" href="http://www.github.com/pyi891/js-picross">
-          <img src="../images/GitHub-Mark-32px.png" />
+          <img src="../GitHub-Mark-32px.png" />
         </a>
       </div>
     );

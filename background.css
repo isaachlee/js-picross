@@ -54,7 +54,7 @@
 
 .top {
   background-color: #3E69C3;
-  background-image: url(../images/codepen.svg);
+  background-image: url(./codepen.svg);
   background-position: center center;
   background-size: 500px;
   -webkit-animation: scrollBad 5s linear infinite;

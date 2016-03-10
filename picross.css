@@ -82,7 +82,7 @@ html {
 }
 
 .tile.won {
-  background-image: url("../images/rainbow.gif");
+  background-image: url("./rainbow.gif");
   background-color: transparent;
 }
 

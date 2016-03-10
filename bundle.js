@@ -19825,7 +19825,7 @@
 	      React.createElement(
 	        'a',
 	        { target: '_blank', href: 'http://www.github.com/pyi891/js-picross' },
-	        React.createElement('img', { src: '../images/GitHub-Mark-32px.png' })
+	        React.createElement('img', { src: '../GitHub-Mark-32px.png' })
 	      )
 	    );
 	  }
@@ -21489,7 +21489,7 @@
 	
 	  getInitialState: function () {
 	    var music = new Howler.Howl({
-	      urls: ['../ntm-japan.mp3'],
+	      urls: ['http://res.cloudinary.com/dznowmwuz/video/upload/v1457587073/ntm-japan_dbfbyg.mp3'],
 	      autoplay: true,
 	      loop: true,
 	      volume: 0.5

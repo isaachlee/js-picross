@@ -4,7 +4,7 @@ var React = require('react'),
 var MusicPlayer = React.createClass({
   getInitialState: function () {
     var music = new Howler.Howl({
-      urls: ['../ntm-japan.mp3'],
+      urls: ['http://res.cloudinary.com/dznowmwuz/video/upload/v1457587073/ntm-japan_dbfbyg.mp3'],
       autoplay: true,
       loop: true,
       volume: 0.5
