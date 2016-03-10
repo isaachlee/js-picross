@@ -19657,12 +19657,12 @@
 
 	var React = __webpack_require__(1),
 	    Board = __webpack_require__(160),
-	    SplashPage = __webpack_require__(174),
+	    SplashPage = __webpack_require__(164),
 	    Picross = __webpack_require__(162),
 	    ArrayHelpers = __webpack_require__(163),
-	    ReactSlider = __webpack_require__(164),
-	    Boron = __webpack_require__(165),
-	    MusicPlayer = __webpack_require__(230);
+	    ReactSlider = __webpack_require__(165),
+	    Boron = __webpack_require__(166),
+	    MusicPlayer = __webpack_require__(175);
 	
 	var Game = React.createClass({
 	  displayName: 'Game',
@@ -20072,6 +20072,56 @@
 
 /***/ },
 /* 164 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var React = __webpack_require__(1);
+	
+	var SplashPage = React.createClass({
+	  displayName: "SplashPage",
+	
+	  render: function () {
+	    return React.createElement(
+	      "div",
+	      { className: "how-to-play" },
+	      React.createElement(
+	        "p",
+	        null,
+	        "How to play:"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Left click on a tile to shade it in and right click to mark it as invalid."
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Each set of hints along each row and column indicates the groupings of shaded tiles in order along the axis. For example, a row with the hint set \"3 1 2\" means that along that row, there is a group of three shaded tiles, followed by a single shaded tile, followed by two shaded tiles, each separated by at least one blank tile."
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Use your logic skills to complete the puzzle!"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "For more information, take a look ",
+	        React.createElement(
+	          "a",
+	          { target: "_blank", href: "https://en.wikipedia.org/wiki/Nonogram" },
+	          "here"
+	        ),
+	        "!"
+	      )
+	    );
+	  }
+	});
+	
+	module.exports = SplashPage;
+
+/***/ },
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -20869,12 +20919,12 @@
 
 
 /***/ },
-/* 165 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var modalFactory = __webpack_require__(166);
-	var insertKeyframesRule = __webpack_require__(171);
-	var appendVendorPrefix = __webpack_require__(168);
+	var modalFactory = __webpack_require__(167);
+	var insertKeyframesRule = __webpack_require__(172);
+	var appendVendorPrefix = __webpack_require__(169);
 	
 	var animation = {
 	    show: {
@@ -20975,12 +21025,12 @@
 
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1);
-	var transitionEvents = __webpack_require__(167);
-	var appendVendorPrefix = __webpack_require__(168);
+	var transitionEvents = __webpack_require__(168);
+	var appendVendorPrefix = __webpack_require__(169);
 	
 	module.exports = function(animation){
 	
@@ -21159,7 +21209,7 @@
 
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21260,12 +21310,12 @@
 
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var getVendorPropertyName = __webpack_require__(169);
+	var getVendorPropertyName = __webpack_require__(170);
 	
 	module.exports = function(target, sources) {
 	  var to = Object(target);
@@ -21296,12 +21346,12 @@
 
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var builtinStyle = __webpack_require__(170);
+	var builtinStyle = __webpack_require__(171);
 	var prefixes = ['Moz', 'Webkit', 'O', 'ms'];
 	var domVendorPrefix;
 	
@@ -21339,7 +21389,7 @@
 
 
 /***/ },
-/* 170 */
+/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21348,13 +21398,13 @@
 
 
 /***/ },
-/* 171 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 	
-	var insertRule = __webpack_require__(172);
-	var vendorPrefix = __webpack_require__(173)();
+	var insertRule = __webpack_require__(173);
+	var vendorPrefix = __webpack_require__(174)();
 	var index = 0;
 	
 	module.exports = function(keyframes) {
@@ -21384,7 +21434,7 @@
 
 
 /***/ },
-/* 172 */
+/* 173 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21409,7 +21459,7 @@
 
 
 /***/ },
-/* 173 */
+/* 174 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21428,123 +21478,18 @@
 
 
 /***/ },
-/* 174 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var React = __webpack_require__(1);
-	
-	var SplashPage = React.createClass({
-	  displayName: "SplashPage",
-	
-	  render: function () {
-	    return React.createElement(
-	      "div",
-	      { className: "how-to-play" },
-	      React.createElement(
-	        "p",
-	        null,
-	        "How to play:"
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Left click on a tile to shade it in and right click to mark it as invalid."
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Each set of hints along each row and column indicates the groupings of shaded tiles in order along the axis. For example, a row with the hint set \"3 1 2\" means that along that row, there is a group of three shaded tiles, followed by a single shaded tile, followed by two shaded tiles, each separated by at least one blank tile."
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Use your logic skills to complete the puzzle!"
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "For more information, take a look ",
-	        React.createElement(
-	          "a",
-	          { target: "_blank", href: "https://en.wikipedia.org/wiki/Nonogram" },
-	          "here"
-	        ),
-	        "!"
-	      )
-	    );
-	  }
-	});
-	
-	module.exports = SplashPage;
-
-/***/ },
-/* 175 */,
-/* 176 */,
-/* 177 */,
-/* 178 */,
-/* 179 */,
-/* 180 */,
-/* 181 */,
-/* 182 */,
-/* 183 */,
-/* 184 */,
-/* 185 */,
-/* 186 */,
-/* 187 */,
-/* 188 */,
-/* 189 */,
-/* 190 */,
-/* 191 */,
-/* 192 */,
-/* 193 */,
-/* 194 */,
-/* 195 */,
-/* 196 */,
-/* 197 */,
-/* 198 */,
-/* 199 */,
-/* 200 */,
-/* 201 */,
-/* 202 */,
-/* 203 */,
-/* 204 */,
-/* 205 */,
-/* 206 */,
-/* 207 */,
-/* 208 */,
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */,
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var React = __webpack_require__(1),
-	    Howler = __webpack_require__(231);
+	    Howler = __webpack_require__(176);
 	
 	var MusicPlayer = React.createClass({
 	  displayName: 'MusicPlayer',
 	
 	  getInitialState: function () {
 	    var music = new Howler.Howl({
-	      urls: ['../music/ntm-japan.mp3'],
+	      urls: ['../ntm-japan.mp3'],
 	      autoplay: true,
 	      loop: true,
 	      volume: 0.5
@@ -21585,7 +21530,7 @@
 	module.exports = MusicPlayer;
 
 /***/ },
-/* 231 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_RESULT__;/*!
