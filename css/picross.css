@@ -43,9 +43,11 @@ html {
   align-items: center;
   width: auto;
   height: auto;
+  min-width: 755px;
   padding: 30px;
   background-color: #FFFBE6;
   border-radius: 5px;
+  border: 3px solid orange;
 }
 
 .ui {

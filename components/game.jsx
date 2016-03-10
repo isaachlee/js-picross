@@ -4,7 +4,8 @@ var React = require('react'),
     Picross = require('../picross'),
     ArrayHelpers = require('../helpers/array_helpers'),
     ReactSlider = require('react-slider'),
-    Boron = require('boron/ScaleModal');
+    Boron = require('boron/ScaleModal'),
+    MusicPlayer = require('./music_player');
 
 var Game = React.createClass({
   getInitialState: function () {
@@ -129,7 +130,12 @@ var Game = React.createClass({
           <button onClick={this.handleNewGame}>New Game</button>
           </div>
           <button onClick={this.showTutorialModal}>How to Play</button>
+          <MusicPlayer />
         </div>
+        <br />
+        <a target="_blank" href="http://www.github.com/pyi891/js-picross">
+          <img src="../images/GitHub-Mark-32px.png" />
+        </a>
       </div>
     );
   }
