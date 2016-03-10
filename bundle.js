@@ -19825,7 +19825,7 @@
 	      React.createElement(
 	        'a',
 	        { target: '_blank', href: 'http://www.github.com/pyi891/js-picross' },
-	        React.createElement('img', { src: '../GitHub-Mark-32px.png' })
+	        React.createElement('img', { src: 'http://res.cloudinary.com/dznowmwuz/image/upload/v1457589146/GitHub-Mark-32px_osfubh.png' })
 	      )
 	    );
 	  }
