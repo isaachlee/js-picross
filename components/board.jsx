@@ -1,6 +1,7 @@
 var React = require('react'),
     Tile = require('./tile'),
-    Picross = require('../picross');
+    Picross = require('../picross'),
+    ArrayHelpers = require('../helpers/array_helpers');
 
 var Board = React.createClass({
   generateRowHints: function(rowIdx) {
@@ -12,10 +13,26 @@ var Board = React.createClass({
     )
   },
 
+  generateColHints: function() {
+    var that = this;
+    var solutionGrid = this.props.board.solutionGrid;
+    return ArrayHelpers.transpose(solutionGrid).map(function(col,idx){
+      return (
+        <div className="col-hint-item" key={idx}>
+          {that.props.board.generateHints(col)}
+        </div>
+      )
+    });
+  },
+
+
   render: function() {
     var that = this;
     return (
       <div className="board">
+        <div className="col-hints">
+          {this.generateColHints()}
+        </div>
         {
           this.props.board.playerGrid.map(function(row, i) {
             return (

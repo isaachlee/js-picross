@@ -3,8 +3,8 @@ var React = require('react');
 var Tile = React.createClass({
   tileClass: function () {
     var className = "tile";
-    if(this.props.tile.incorrect) {
-      className += " incorrect"
+    if(this.props.tile.won) {
+      className += " won"
     } else if(this.props.tile.crossed) {
       className += " crossed"
     } else if(this.props.tile.marked) {
@@ -29,7 +29,8 @@ var Tile = React.createClass({
 
   render: function() {
     return (
-      <div onClick={this.handleLeftClick} onContextMenu={this.handleRightClick} className={this.tileClass()}>
+      <div onClick={this.handleLeftClick}
+         onContextMenu={this.handleRightClick} className={this.tileClass()}>
       </div>
     )
   }

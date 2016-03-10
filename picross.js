@@ -4,23 +4,25 @@ var Tile = function (pos) {
   this.pos = pos;
   this.marked = false;
   this.crossed = false;
-  this.incorrect = false;
+  this.won = false;
 }
 
-Tile.prototype.toggleReveal = function () {
-  if(!(this.incorrect)) {
-    this.marked = !this.marked;
+Tile.prototype.toggleWon = function () {
+  if(!(this.won)) {
+    this.won = !this.won;
   }
 };
 
 Tile.prototype.toggleCrossed = function () {
-  if(!(this.incorrect)) {
+  if(!this.won) {
     this.crossed = !this.crossed;
   }
 };
 
-Tile.prototype.incorrectClick = function () {
-  this.incorrect = true
+Tile.prototype.toggleReveal = function () {
+  if(!this.won) {
+    this.marked = !this.marked;
+  }
 };
 
 var Board = function(solutionGrid) {
