@@ -9,20 +9,12 @@ var React = require('react'),
 
 var Game = React.createClass({
   getInitialState: function () {
-    // var SAMPLE_SOLUTION = [
-    //   [0,1, 1, 1, 1, 1],
-    //   [0,1, 0, 1, 0, 1],
-    //   [0,0, 1, 0, 1, 0],
-    //   [0,1, 1, 1, 0, 1],
-    //   [1, 1,0, 1, 1, 1],
-    //   [1, 1,0, 1, 1, 0]
-    //
-    // ];
     var grid = this.generateRandomGrid(5);
     return { boardSize:5, board: new Picross.Board(grid) }
   },
 
-  componontDidMount: function () {
+  componentDidMount: function () {
+    console.log('componentDidMount');
     this.showTutorialModal();
   },
 
@@ -120,7 +112,7 @@ var Game = React.createClass({
       <div className="game">
         <h1>Picross</h1>
         <Boron ref='tutorialModal' contentStyle={contentStyle}>
-          <SplashPage />
+          <SplashPage hideTutorialModal={this.hideTutorialModal} />
         </Boron>
         {this.renderWinText()}
         <Board updateGame={this.updateGame} board={this.state.board} />

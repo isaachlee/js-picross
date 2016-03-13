@@ -19668,20 +19668,12 @@
 	  displayName: 'Game',
 	
 	  getInitialState: function () {
-	    // var SAMPLE_SOLUTION = [
-	    //   [0,1, 1, 1, 1, 1],
-	    //   [0,1, 0, 1, 0, 1],
-	    //   [0,0, 1, 0, 1, 0],
-	    //   [0,1, 1, 1, 0, 1],
-	    //   [1, 1,0, 1, 1, 1],
-	    //   [1, 1,0, 1, 1, 0]
-	    //
-	    // ];
 	    var grid = this.generateRandomGrid(5);
 	    return { boardSize: 5, board: new Picross.Board(grid) };
 	  },
 	
-	  componontDidMount: function () {
+	  componentDidMount: function () {
+	    console.log('componentDidMount');
 	    this.showTutorialModal();
 	  },
 	
@@ -19793,7 +19785,7 @@
 	      React.createElement(
 	        Boron,
 	        { ref: 'tutorialModal', contentStyle: contentStyle },
-	        React.createElement(SplashPage, null)
+	        React.createElement(SplashPage, { hideTutorialModal: this.hideTutorialModal })
 	      ),
 	      this.renderWinText(),
 	      React.createElement(Board, { updateGame: this.updateGame, board: this.state.board }),
@@ -20096,8 +20088,19 @@
 	      React.createElement(
 	        "p",
 	        null,
-	        "Each set of hints along each row and column indicates the groupings of shaded tiles in order along the axis. For example, a row with the hint set \"3 1 2\" means that along that row, there is a group of three shaded tiles, followed by a single shaded tile, followed by two shaded tiles, each separated by at least one blank tile."
+	        "Each set of hints along each row and column indicates the groupings of shaded tiles in order along the axis."
 	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "For example, a row with the hint set \"3 1 2\" means that along that row, there is a group of three shaded tiles, separated by at least one blank tile, followed by a single shaded tile, separated by at least one blank tile followed by two shaded tiles."
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Here is an example of the puzzle being solved. Start with large numbers first and work your way through to the rest of the puzzle!"
+	      ),
+	      React.createElement("img", { src: "http://res.cloudinary.com/dznowmwuz/image/upload/v1457726024/picross-tutorial_xft5ao.gif", alt: "picross-tutorial" }),
 	      React.createElement(
 	        "p",
 	        null,
@@ -20113,6 +20116,11 @@
 	          "here"
 	        ),
 	        "!"
+	      ),
+	      React.createElement(
+	        "button",
+	        { onClick: this.props.hideTutorialModal },
+	        "Close"
 	      )
 	    );
 	  }
