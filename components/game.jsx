@@ -14,7 +14,6 @@ var Game = React.createClass({
   },
 
   componentDidMount: function () {
-    console.log('componentDidMount');
     this.showTutorialModal();
   },
 

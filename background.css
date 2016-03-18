@@ -53,7 +53,8 @@
 }
 
 .top {
-  background-color: #3E69C3;
+  /*background-color: #3E69C3;*/
+  background-color: cornflowerblue;
   background-image: url(./codepen.svg);
   background-position: center center;
   background-size: 500px;

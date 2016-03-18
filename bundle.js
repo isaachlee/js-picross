@@ -19673,7 +19673,6 @@
 	  },
 	
 	  componentDidMount: function () {
-	    console.log('componentDidMount');
 	    this.showTutorialModal();
 	  },
 	
@@ -20083,17 +20082,17 @@
 	      React.createElement(
 	        "p",
 	        null,
-	        "Left click on a tile to shade it in and right click to mark it as invalid."
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
 	        "Each set of hints along each row and column indicates the groupings of shaded tiles in order along the axis."
 	      ),
 	      React.createElement(
 	        "p",
 	        null,
 	        "For example, a row with the hint set \"3 1 2\" means that along that row, there is a group of three shaded tiles, separated by at least one blank tile, followed by a single shaded tile, separated by at least one blank tile followed by two shaded tiles."
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Left click on a tile to shade it in and right click to mark it as invalid."
 	      ),
 	      React.createElement(
 	        "p",
