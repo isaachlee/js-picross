@@ -19760,7 +19760,7 @@
 	        this.renderDimensionForm(),
 	        React.createElement(
 	          'button',
-	          null,
+	          { className: 'highlight' },
 	          'Generate New Puzzle!'
 	        )
 	      )
@@ -19794,20 +19794,25 @@
 	        React.createElement(
 	          'div',
 	          { className: 'new-game' },
-	          'Level: ',
-	          this.state.boardSize,
-	          'x',
-	          this.state.boardSize,
-	          React.createElement('input', { onChange: this.handleSliderChange, type: 'range', min: '5', max: '20', step: '5', defaultValue: '5' }),
+	          React.createElement(
+	            'div',
+	            null,
+	            'Level: ',
+	            this.state.boardSize,
+	            'x',
+	            this.state.boardSize
+	          ),
+	          React.createElement('input', { onChange: this.handleSliderChange, className: 'slider', type: 'range', min: '5', max: '20', step: '5', defaultValue: '5' }),
+	          React.createElement('br', null),
 	          React.createElement(
 	            'button',
-	            { onClick: this.handleNewGame },
+	            { className: 'highlight', onClick: this.handleNewGame },
 	            'New Game'
 	          )
 	        ),
 	        React.createElement(
 	          'button',
-	          { onClick: this.showTutorialModal },
+	          { className: 'highlight', onClick: this.showTutorialModal },
 	          'How to Play'
 	        ),
 	        React.createElement(MusicPlayer, null)
@@ -20082,24 +20087,17 @@
 	      React.createElement(
 	        "p",
 	        null,
-	        "Each set of hints along each row and column indicates the groupings of shaded tiles in order along the axis."
+	        "Each set of hints along each row and column indicates the groupings of continuous shaded tiles in order along the axis. Each grouping of tiles is separated by at least one blank tile. Example:"
 	      ),
+	      React.createElement("img", { src: "http://res.cloudinary.com/dznowmwuz/image/upload/v1458346869/row_jrzii1.png", alt: "picross-row" }),
 	      React.createElement(
 	        "p",
 	        null,
-	        "For example, a row with the hint set \"3 1 2\" means that along that row, there is a group of three shaded tiles, separated by at least one blank tile, followed by a single shaded tile, separated by at least one blank tile followed by two shaded tiles."
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Left click on a tile to shade it in and right click to mark it as invalid."
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
+	        "Left click on a tile to shade it in and right click to mark it as blank. ",
+	        React.createElement("br", null),
 	        "Here is an example of the puzzle being solved. Start with large numbers first and work your way through to the rest of the puzzle!"
 	      ),
-	      React.createElement("img", { src: "http://res.cloudinary.com/dznowmwuz/image/upload/v1457726024/picross-tutorial_xft5ao.gif", alt: "picross-tutorial" }),
+	      React.createElement("img", { src: "http://res.cloudinary.com/dznowmwuz/image/upload/v1458346490/picross_tutorial_o2oyno.gif", alt: "picross-tutorial" }),
 	      React.createElement(
 	        "p",
 	        null,
@@ -20118,7 +20116,7 @@
 	      ),
 	      React.createElement(
 	        "button",
-	        { onClick: this.props.hideTutorialModal },
+	        { className: "highlight", onClick: this.props.hideTutorialModal },
 	        "Close"
 	      )
 	    );
@@ -21527,7 +21525,7 @@
 	      { className: 'music-player' },
 	      React.createElement(
 	        'button',
-	        { onClick: this.handleMute },
+	        { className: 'highlight', onClick: this.handleMute },
 	        this.renderMuteText()
 	      )
 	    );

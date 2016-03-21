@@ -32,7 +32,7 @@ var MusicPlayer = React.createClass({
 
     return (
       <div className="music-player">
-        <button onClick={this.handleMute}>{this.renderMuteText()}</button>
+        <button className="highlight" onClick={this.handleMute}>{this.renderMuteText()}</button>
       </div>
     )
   }

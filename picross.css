@@ -49,6 +49,7 @@ html {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin-bottom: 50px;
   align-items: center;
   width: auto;
   height: auto;
@@ -202,3 +203,40 @@ html {
   align-self: center;
   padding-left:3px;
 }*/
+button:hover {
+  cursor: pointer;
+}
+
+.highlight:hover {
+  background-color: #FFffff;
+  color: cornflowerblue;
+}
+
+button {
+  width: 100px;
+  height: auto;
+  color: #ffffff;
+  background-color: cornflowerblue;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px 0 5px 0;
+  border:0;
+  -webkit-transition: all 0.25s;
+  -moz-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
+.slider {
+  border-radius: 5px;
+  background: #d7dcdf;
+  width:150px;
+}
+
+.new-game {
+  flex: none;
+  display: flex;
+  height:auto;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

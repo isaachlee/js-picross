@@ -53,11 +53,30 @@
 }
 
 .top {
-  /*background-color: #3E69C3;*/
   background-color: cornflowerblue;
   background-image: url(./codepen.svg);
   background-position: center center;
   background-size: 500px;
   -webkit-animation: scrollBad 5s linear infinite;
   animation: scrollBad 5s linear infinite;
+}
+
+
+.bottom {
+  background-color: cornflowerblue;
+  overflow: hidden;
+  position: relative;
+}
+.bottom .scroll {
+  background-image: url(./codepen.svg);
+  background-position: center center;
+  background-size: 500px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 400%;
+  width: 100%;
+  z-index: -1;
+  -webkit-animation: scrollGood 5s linear infinite;
+  animation: scrollGood 5s linear infinite;
 }

@@ -95,7 +95,7 @@ var Game = React.createClass({
       <div>
         <form onSubmit={this.handleFormSubmit}>
           {this.renderDimensionForm()}
-          <button>Generate New Puzzle!</button>
+          <button className="highlight">Generate New Puzzle!</button>
         </form>
       </div>
     )
@@ -117,10 +117,11 @@ var Game = React.createClass({
         <Board updateGame={this.updateGame} board={this.state.board} />
         <div className="ui">
           <div className="new-game">
-            Level: {this.state.boardSize}x{this.state.boardSize}<input onChange={this.handleSliderChange} type="range" min="5" max="20" step="5" defaultValue="5" />
-          <button onClick={this.handleNewGame}>New Game</button>
+            <div>Level: {this.state.boardSize}x{this.state.boardSize}</div>
+            <input onChange={this.handleSliderChange} className="slider" type="range" min="5" max="20" step="5" defaultValue="5" /><br/>
+          <button className="highlight" onClick={this.handleNewGame}>New Game</button>
           </div>
-          <button onClick={this.showTutorialModal}>How to Play</button>
+          <button className="highlight" onClick={this.showTutorialModal}>How to Play</button>
           <MusicPlayer />
         </div>
         <br />
